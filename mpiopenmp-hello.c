@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
     numthreads = omp_get_num_threads();
     printf("Proc %d: Using %d threads\n", mypid, numthreads);
   }
+  #pragma omp barrier
   int threadnum = omp_get_thread_num();
   printf("Proc %d: Hello from thread %d of %d\n", mypid, threadnum, numthreads);
 
