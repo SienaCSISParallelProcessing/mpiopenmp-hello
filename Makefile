@@ -10,7 +10,7 @@ CFLAGS=-Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include
 LDFLAGS=-L/opt/homebrew/opt/libomp/lib -lomp
 
 mpiopenmp-hello:	$(OFILES)
-	$(CC) -o mpiopenmp-hello $(OFILES) $(LDFLAGS)
+	$(CC) $(CFLAGS) -o mpiopenmp-hello $(OFILES) $(LDFLAGS)
 
 clean::
 	/bin/rm -f mpiopenmp-hello $(OFILES)
